@@ -16,7 +16,6 @@ class LinkList extends Component {
     }
 
     // 3
-    console.log('allLinks', this.props);
     const linksToRender = this.props.allLinksQuery.allLinks;
 
     return (
