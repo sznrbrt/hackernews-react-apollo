@@ -3,6 +3,10 @@ import { graphql, gql } from 'react-apollo'
 import Link from './Link'
 
 class LinkList extends Component {
+  
+  componentWillReceiveProps() {
+    this.props.allLinksQuery.refetch()
+  }
 
   render() {
     // 1
@@ -43,4 +47,6 @@ const ALL_LINKS_QUERY = gql`
 `
 
 // 3
-export default graphql(ALL_LINKS_QUERY, { name: 'allLinksQuery' }) (LinkList)
+export default graphql(ALL_LINKS_QUERY, {
+  name: 'allLinksQuery'
+}) (LinkList)

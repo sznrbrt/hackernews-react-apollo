@@ -7,6 +7,7 @@ class Header extends Component {
 
   render() {
     const userId = localStorage.getItem(GC_USER_ID)
+    
     return (
       <div className='flex pa1 justify-between nowrap orange'>
         <div className='flex flex-fixed black'>
